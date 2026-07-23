@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/zadna0/public_html/
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -RF dist/. $DEPLOYPATH
+    - /bin/cp -f .htaccess $DEPLOYPATH/.htaccess 2>/dev/null || true
