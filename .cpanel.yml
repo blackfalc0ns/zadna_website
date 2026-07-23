@@ -1,8 +1,4 @@
 ---
 deployment:
   tasks:
-    # Main domain: zadna0.com → public_html (keeps existing admin/api/vendor folders).
-    - export DEPLOYPATH=/home/zadna0/public_html/
-    - /bin/mkdir -p $DEPLOYPATH
-    - /bin/cp -RF dist/. $DEPLOYPATH
-    - /bin/cp -f .htaccess $DEPLOYPATH/.htaccess 2>/dev/null || true
+    - /bin/cp -RF dist/. /home/zadna0/public_html/ && /bin/cp -f .htaccess /home/zadna0/public_html/.htaccess
