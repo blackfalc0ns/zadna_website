@@ -1,7 +1,8 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/zadna0/public_html/
+    # Dedicated folder for the marketing site (do NOT use public_html — that hosts api/admin/vendor).
+    - export DEPLOYPATH=/home/zadna0/zadana.com/
     - /bin/mkdir -p $DEPLOYPATH
     - /bin/cp -RF dist/. $DEPLOYPATH
     - /bin/cp -f .htaccess $DEPLOYPATH/.htaccess 2>/dev/null || true
