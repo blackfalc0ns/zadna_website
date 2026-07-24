@@ -9,6 +9,7 @@ const messages = {
     'nav.service': 'الخدمة',
     'nav.how': 'كيف تعمل',
     'nav.privacy': 'الخصوصية',
+    'nav.support': 'الدعم',
     'nav.label': 'التنقل الرئيسي',
     'brand.home': 'زدانا — الصفحة الرئيسية',
     'lang.switch': 'English',
@@ -40,6 +41,9 @@ const messages = {
     'privacy.meta.description':
       'سياسة خصوصية تطبيق زدانا للعميل — كيف نجمع ونستخدم ونحمي بياناتك.',
     'privacy.meta.title': 'سياسة الخصوصية | زدانا',
+    'support.meta.description':
+      'تواصل مع دعم زدانا — مساعدة للحساب والطلبات والدفع والتوصيل.',
+    'support.meta.title': 'الدعم | زدانا',
   },
   en: {
     'meta.description':
@@ -49,6 +53,7 @@ const messages = {
     'nav.service': 'Service',
     'nav.how': 'How it works',
     'nav.privacy': 'Privacy',
+    'nav.support': 'Support',
     'nav.label': 'Main navigation',
     'brand.home': 'Zadana — Home',
     'lang.switch': 'العربية',
@@ -81,6 +86,9 @@ const messages = {
     'privacy.meta.description':
       'Zadana Customer App Privacy Policy — how we collect, use, and protect your data.',
     'privacy.meta.title': 'Privacy Policy | Zadana',
+    'support.meta.description':
+      'Contact Zadana support — help with accounts, orders, payments, and delivery.',
+    'support.meta.title': 'Support | Zadana',
   },
 };
 
@@ -122,9 +130,19 @@ export function applyLanguage(lang) {
     el.setAttribute('alt', next === 'ar' ? 'زدانا' : 'Zadana');
   });
 
-  const titleKey = document.body.dataset.page === 'privacy' ? 'privacy.meta.title' : 'meta.title';
+  const page = document.body.dataset.page;
+  const titleKey =
+    page === 'privacy'
+      ? 'privacy.meta.title'
+      : page === 'support'
+        ? 'support.meta.title'
+        : 'meta.title';
   const descKey =
-    document.body.dataset.page === 'privacy' ? 'privacy.meta.description' : 'meta.description';
+    page === 'privacy'
+      ? 'privacy.meta.description'
+      : page === 'support'
+        ? 'support.meta.description'
+        : 'meta.description';
 
   if (dict[titleKey]) document.title = dict[titleKey];
 

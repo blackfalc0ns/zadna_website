@@ -595,6 +595,37 @@ a {
   text-underline-offset: 3px;
 }
 
+.support-channels {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.75rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.support-channels li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(18, 124, 140, 0.12);
+}
+
+.support-channels span {
+  color: var(--zadna-ink);
+  font-weight: 700;
+}
+
+.support-channels a {
+  text-decoration: none;
+}
+
+.support-channels a:hover {
+  text-decoration: underline;
+}
+
 /* —— Motion —— */
 [data-reveal] {
   opacity: 0;
