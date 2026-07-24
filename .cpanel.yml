@@ -1,4 +1,4 @@
 ---
 deployment:
   tasks:
-    - /bin/cp -RF dist/. /home/zadna0/public_html/ && /bin/cp -f .htaccess /home/zadna0/public_html/.htaccess
+    - /bin/cp -R dist/. /home/zadna0/public_html/ && /bin/cp -f .htaccess /home/zadna0/public_html/.htaccess
